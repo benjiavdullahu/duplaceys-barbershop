@@ -1,102 +1,564 @@
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/banner/duplaceys.jpg"
+            alt="Duplacye's Barbershop - Traditional barbering in downtown Hamilton"
+            fill
+            className="object-cover filter blur-[8px]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/55"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/40"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="text-white">
+              <div className="mb-4 lg:mb-6">
+                <span
+                  className="text-purple-200 text-lg font-medium tracking-[0.2em] uppercase"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  HAMILTON'S LEGACY BARBERSHOP
+                </span>
+              </div>
+              <h1
+                className="text-5xl md:text-6xl lg:text-8xl font-light mb-4 lg:mb-6 leading-[0.9]"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Duplacye's
+                <span
+                  className="block text-4xl md:text-5xl lg:text-6xl text-gray-200 font-light italic"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  Barbershop
+                </span>
+              </h1>
+              <p
+                className="text-xl md:text-2xl lg:text-3xl mb-3 lg:mb-4 text-gray-200 leading-relaxed font-light"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Where tradition meets craftsmanship
+              </p>
+              <p
+                className="text-base lg:text-lg mb-6 lg:mb-8 text-gray-300 leading-relaxed max-w-3xl mx-auto font-light"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Three decades of professional barbering excellence in the heart
+                of downtown Hamilton. Traditional techniques meet modern style.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-6 lg:mb-8 justify-center">
+                <Link
+                  href="#services"
+                  className="bg-red-600 hover:bg-red-700 text-white px-8 lg:px-10 py-3 lg:py-4 rounded font-medium text-lg transition-all duration-300 text-center shadow-lg hover:shadow-xl transform hover:scale-105 tracking-wide"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  View Services
+                </Link>
+                <Link
+                  href="/history"
+                  className="border-2 border-slate-400 hover:bg-slate-400 hover:text-black text-slate-300 px-8 lg:px-10 py-3 lg:py-4 rounded font-medium text-lg transition-all duration-300 text-center backdrop-blur-sm tracking-wide"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  Our Legacy
+                </Link>
+              </div>
+              <div
+                className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8 justify-center text-sm lg:text-base"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                <div className="flex items-center">
+                  <div className="flex text-yellow-400  mr-2">
+                    {"★".repeat(4)}★
+                  </div>
+                  <span className="text-gray-200">
+                    4.4 (104 Google reviews)
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <div className="flex text-yellow-400  mr-2">
+                    {"★".repeat(5)}
+                  </div>
+                  <span className="text-gray-200">5 (Yelp)</span>
+                </div>
+                <div className="text-gray-200 font-medium">
+                  30+ Years Experience
+                </div>
+              </div>
+
+              {/* Visit Info */}
+              <div className="mt-12 lg:mt-16 bg-black/60 backdrop-blur-md rounded-2xl p-6 lg:p-8 border border-slate-700/50 shadow-2xl max-w-2xl mx-auto">
+                <div className="text-center">
+                  <h3
+                    className="text-2xl font-light mb-4 text-gray-200"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    Visit Us Today
+                  </h3>
+                  <div
+                    className="space-y-3 text-gray-200"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    <p className="text-lg font-medium">
+                      150 King Street East, Downtown Hamilton
+                    </p>
+                    <div className="border-t border-slate-600/50 pt-4 mt-4">
+                      <p className="text-sm font-medium">Tuesday - Saturday</p>
+                      <p className="text-lg font-semibold text-gray-200">
+                        9:00 AM - 5:00 PM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce hidden lg:block">
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </div>
+      </section>
+
+      {/* Quick Stats */}
+      <section className="py-12 lg:py-16 bg-gradient-to-b from-black to-slate-900 text-white ">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 text-center">
+              <div className="group bg-black/30 backdrop-blur rounded-xl p-6 border border-purple-600/20 hover:border-purple-600/50 transition-all duration-300">
+                <div className="text-3xl lg:text-4xl font-bold text-gray-200  mb-2 group-hover:scale-110 transition-transform duration-300">
+                  30+
+                </div>
+                <div className="text-gray-300 text-sm lg:text-base">
+                  Years of Service
+                </div>
+              </div>
+              <div className="group bg-black/30 backdrop-blur rounded-xl p-6 border border-purple-600/20 hover:border-purple-600/50 transition-all duration-300">
+                <div className="text-3xl lg:text-4xl font-bold text-gray-200 mb-2 group-hover:scale-110 transition-transform duration-300">
+                  Under $30
+                </div>
+                <div className="text-gray-300 text-sm lg:text-base">
+                  All Services
+                </div>
+              </div>
+              <div className="group bg-black/30 backdrop-blur rounded-xl p-6 border border-purple-600/20 hover:border-purple-600/50 transition-all duration-300">
+                <div className="text-3xl lg:text-4xl font-bold text-gray-200 mb-2 group-hover:scale-110 transition-transform duration-300">
+                  2
+                </div>
+                <div className="text-gray-300 text-sm lg:text-base">
+                  Master Barbers
+                </div>
+              </div>
+              <div className="group bg-black/30 backdrop-blur rounded-xl p-6 border border-purple-600/20 hover:border-purple-600/50 transition-all duration-300">
+                <div className="text-3xl lg:text-4xl font-bold text-gray-200 mb-2 group-hover:scale-110 transition-transform duration-300">
+                  104
+                </div>
+                <div className="text-gray-300 text-sm lg:text-base">
+                  Google Reviews
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-16 lg:py-24 bg-slate-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12 lg:mb-16">
+              <span
+                className="text-gray-200 text-lg font-medium tracking-[0.2em] uppercase mb-4 block"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                OUR EXPERTISE
+              </span>
+              <h2
+                className="text-4xl lg:text-6xl font-light mb-6"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Services & Pricing
+              </h2>
+            </div>
+
+            <div className="bg-gray-900/80 rounded-xl p-8 lg:p-12 max-w-2xl mx-auto">
+              <div className="space-y-4">
+                <div className="flex justify-between items-center border-b border-gray-700 pb-3">
+                  <span
+                    className="text-lg font-medium text-white tracking-wide"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    HAIRCUT
+                  </span>
+                  <span
+                    className="text-xl font-light text-gray-200"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    $23.00
+                  </span>
+                </div>
+                <div className="flex justify-between items-center border-b border-gray-700 pb-3">
+                  <span
+                    className="text-lg font-medium text-white tracking-wide"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    SHAVE
+                  </span>
+                  <span
+                    className="text-xl font-light text-gray-200"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    $22.00
+                  </span>
+                </div>
+                <div className="flex justify-between items-center border-b border-gray-700 pb-3">
+                  <span
+                    className="text-lg font-medium text-white tracking-wide"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    BEARD TRIM
+                  </span>
+                  <span
+                    className="text-xl font-light text-gray-200"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    $12.00
+                  </span>
+                </div>
+                <div className="flex justify-between items-center border-b border-gray-700 pb-3">
+                  <span
+                    className="text-lg font-medium text-white tracking-wide"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    NECK TRIM
+                  </span>
+                  <span
+                    className="text-xl font-light text-gray-200"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    $10.00
+                  </span>
+                </div>
+                <div className="flex justify-between items-center border-b border-gray-700 pb-3">
+                  <span
+                    className="text-lg font-medium text-white tracking-wide"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    SHAMPOO
+                  </span>
+                  <span
+                    className="text-xl font-light text-gray-200"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    $10.00
+                  </span>
+                </div>
+                <div className="flex justify-between items-center border-b border-gray-700 pb-3">
+                  <span
+                    className="text-lg font-medium text-white tracking-wide"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    HIGHLIGHT
+                  </span>
+                  <span
+                    className="text-xl font-light text-gray-200"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    $30.00
+                  </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span
+                    className="text-lg font-medium text-white tracking-wide"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    BLACK COLOUR
+                  </span>
+                  <span
+                    className="text-xl font-light text-gray-200"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    $25.00
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section id="team" className="py-16 lg:py-24 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 lg:mb-20">
+              <span
+                className="text-red-600 text-lg font-medium tracking-[0.2em] uppercase mb-4 block"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                MEET THE MASTERS
+              </span>
+              <h2
+                className="text-4xl lg:text-6xl font-light text-gray-900 mb-6"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Our Barbers
+              </h2>
+            </div>
+
+            {/* Team Photo */}
+            <div className="mb-12 lg:mb-16">
+              <div className="bg-gray-300 rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto">
+                <div className="aspect-[16/9] flex items-center justify-center">
+                  <div className="text-center text-gray-600">
+                    <svg
+                      className="w-16 h-16 mx-auto mb-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                    <p className="text-lg font-medium">
+                      Photo of Both Brothers
+                    </p>
+                    <p className="text-sm">
+                      Placeholder for horizontal team photo
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-gray-50 to-slate-50 rounded-3xl p-8 lg:p-12 border border-slate-200">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                <div className="text-center lg:text-left">
+                  <div className="mb-6">
+                    <span className="bg-slate-800 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Master Barber
+                    </span>
+                  </div>
+                  <h3
+                    className="text-2xl lg:text-3xl font-light text-gray-900 mb-3"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    Besim Avdullahu
+                  </h3>
+                  <p
+                    className="text-gray-900 font-medium mb-4 text-lg"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Owner • 25+ Years Experience
+                  </p>
+                </div>
+
+                <div className="text-center lg:text-left">
+                  <div className="mb-6">
+                    <span className="bg-slate-800 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Skilled Barber
+                    </span>
+                  </div>
+                  <h3
+                    className="text-2xl lg:text-3xl font-light text-gray-900 mb-3"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    Bekim Avdullahu
+                  </h3>
+                  <p
+                    className="text-gray-900 font-medium mb-4 text-lg"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    5+ Years Experience
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section id="location" className="py-16 lg:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 lg:mb-16">
+              <span
+                className="text-red-600 text-lg font-medium tracking-[0.2em] uppercase mb-4 block"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                VISIT US
+              </span>
+              <h2
+                className="text-4xl lg:text-6xl font-light text-gray-900 mb-6"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Find Our Location
+              </h2>
+              <p
+                className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Located in the heart of downtown Hamilton on King Street East
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+              {/* Shop Photo */}
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                <div className="h-64 lg:h-80">
+                  <Image
+                    src="/images/general/Shop.webp"
+                    alt="Duplacye's Barbershop storefront at 150 King Street East, Hamilton"
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 bg-gray-50">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    Our Storefront
+                  </h3>
+                  <p className="text-gray-600">
+                    Traditional barbershop in downtown Hamilton
+                  </p>
+                </div>
+              </div>
+
+              {/* Interactive Map */}
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                <div className="h-64 lg:h-80">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.8234567890123!2d-79.8653678846154!3d43.2557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c84d1e3b1234%3A0x567890abcdef!2s150%20King%20St%20E%2C%20Hamilton%2C%20ON!5e0!3m2!1sen!2sca!4v1234567890123!5m2!1sen!2sca"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Duplacye's Barbershop Location - 150 King St East, Hamilton, ON"
+                  ></iframe>
+                </div>
+                <div className="p-6 bg-gray-50">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900">
+                        150 King Street East
+                      </h3>
+                      <p className="text-gray-600">Hamilton, Ontario</p>
+                    </div>
+                    <a
+                      href="https://maps.google.com/?q=150+King+St+East,+Hamilton,+ON"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-slate-800 hover:bg-slate-900 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-sm"
+                    >
+                      Open in Maps
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-black text-gray-300 py-12 lg:py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3
+                className="text-2xl lg:text-3xl font-light text-gray-200 mb-4"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Duplacye's Barbershop
+              </h3>
+              <p
+                className="text-sm text-gray-200 font-medium"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Family owned since the 1990s
+              </p>
+            </div>
+            <div>
+              <h4
+                className="text-lg lg:text-xl font-medium text-white mb-6"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Hours & Services
+              </h4>
+              <div
+                className="space-y-2 text-sm lg:text-base"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                <p>Tuesday - Saturday: 9:00 AM - 5:00 PM</p>
+                <p>Sunday & Monday: Closed</p>
+              </div>
+            </div>
+            <div>
+              <h4
+                className="text-lg lg:text-xl font-medium text-white mb-6"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Visit Us
+              </h4>
+              <div
+                className="space-y-2 text-sm lg:text-base"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                <p>150 King St East</p>
+                <p>Hamilton, Ontario</p>
+                <p className="text-gray-200 font-bold text-lg lg:text-xl">
+                  905-522-8512
+                </p>
+                <p className="text-gray-500">bavdullahub@gmail.com</p>
+                <p className="text-gray-200 text-xs lg:text-sm mt-2">
+                  Downtown Hamilton • Near Jackson Square
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="border-t border-gray-800 mt-8 lg:mt-12 pt-8 text-center text-gray-500 text-sm"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
+            <p>
+              &copy; {new Date().getFullYear()} Duplacye's Barbershop. A
+              Hamilton tradition since the 1990s.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );

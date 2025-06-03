@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Duplacye's Barbershop Website
+
+A beautiful, responsive website for Duplacye's Barbershop - a family-owned traditional barbershop in downtown Hamilton with over 30 years of excellence.
+
+## About Duplacye's Barbershop
+
+- **Location**: 150 King St East, Hamilton, Ontario
+- **Phone**: 905-522-8512
+- **Email**: bavdullahub@gmail.com
+- **Hours**: Tuesday-Saturday, 9:00 AM - 5:00 PM
+- **Established**: Over 30 years ago by Luigi (Italian barber)
+- **Current Owner**: Kosovo immigrant who inherited the business from Luigi
+- **Family Business**: Uncle joined in 2019-2020, making it a true family operation
+
+## Website Features
+
+### ✨ Modern Design with Classic Appeal
+
+- Traditional barbershop colors (red, white, blue) with modern dark purple accent
+- Mobile-responsive design that works on all devices
+- Clean, professional layout with easy navigation
+
+### 📱 Multi-Page Structure
+
+1. **Home** - Hero section, services preview, story introduction, contact CTA
+2. **Services** - Detailed service descriptions with pricing and features
+3. **History** - Beautiful storytelling from Luigi to family business
+4. **Contact** - Contact form, business info, FAQ section
+5. **Location** - Interactive map, directions, parking information
+
+### 🛠 Built With
+
+- **Next.js 15** - React framework with App Router
+- **Tailwind CSS** - Utility-first CSS framework
+- **TypeScript** - Type-safe development
+- **Responsive Design** - Mobile-first approach
+
+## Services Offered
+
+- **Haircuts**: $21 (classic cuts, fades, scissor cuts)
+- **Traditional Shaves**: Call for pricing (hot towel, straight razor)
+- **Hair Washing**: Call for pricing (quality shampoo, scalp massage)
+- **Hair Highlights**: Call for pricing (color consultation, professional products)
 
 ## Getting Started
 
-First, run the development server:
+### Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Adding Content
 
-To learn more about Next.js, take a look at the following resources:
+### 📸 Adding Photos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Replace placeholder images in these sections:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Hero section background image
+- Shop interior photos
+- Before/after haircut examples
+- Historical photos (Luigi era, team photos)
+- Current shop photos
 
-## Deploy on Vercel
+### 🎥 Adding the Historical Video
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Replace the video placeholder in `/history` page:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```jsx
+// Replace this placeholder with actual video embed
+<div className="bg-gray-800 rounded-lg h-64 md:h-96 flex items-center justify-center">
+  // Add video embed here
+</div>
+```
+
+### 📝 Updating Content
+
+Key areas to customize:
+
+- Service prices (currently shows $21 for haircuts, "Call" for others)
+- Team member information
+- Historical details and dates
+- Business hours (currently Tue-Sat 9-5)
+- Contact information
+
+## Color Scheme
+
+- **Primary Red**: `#DC2626` (red-600)
+- **Purple Accent**: `#6B46C1` (purple-800) - matches shop's dark purple walls
+- **Neutral Grays**: Various shades for text and backgrounds
+- **Gradients**: Red to purple for CTAs and hero sections
+
+## Business Story Timeline
+
+1. **30+ years ago**: Luigi (Italian barber) establishes the barbershop
+2. **25 years ago**: Kosovo refugee hired, learns the trade under Luigi
+3. **Luigi's passing**: Business passed to his protégé
+4. **2019-2020**: Brother joins, becomes true family business
+5. **Present**: Two-brother operation maintaining traditional values
+
+## Key Messaging
+
+- **Traditional barbering excellence** with over 30 years of experience
+- **Affordable pricing** - all services under $30
+- **Family-friendly** atmosphere with experienced, friendly barbers
+- **Walk-ins welcome** - no appointment necessary
+- **Quick service** - most haircuts completed in 30 minutes
+- **Downtown Hamilton** location with convenient parking
+
+## Contact Information
+
+- **Phone**: [905-522-8512](tel:905-522-8512)
+- **Email**: [bavdullahub@gmail.com](mailto:bavdullahub@gmail.com)
+- **Address**: 150 King St East, Hamilton, Ontario
+- **Hours**: Tuesday-Saturday 9:00 AM - 5:00 PM (Closed Sunday & Monday)
+
+## Future Enhancements
+
+Consider adding:
+
+- Google Maps integration with API key
+- Customer review system
+- Photo gallery with before/after examples
+- Social media integration
+- Service booking system (if business decides to go digital)
+- Multi-language support (Albanian, English)
+
+## SEO & Marketing
+
+The website is optimized for local search with:
+
+- Location-based keywords (Hamilton, downtown Hamilton, King Street East)
+- Service-based keywords (barbershop, haircuts, traditional shave)
+- Meta descriptions and titles
+- Structured content for search engines
+
+## Notes for Family
+
+This website tells your family's beautiful story of immigration, hard work, and building community connections. It honors Luigi's legacy while showcasing how the business has evolved into a family operation that continues to serve Hamilton with the same dedication to quality and affordability.
+
+The design balances traditional barbershop aesthetics with modern web standards, making it easy for customers to find information while respecting the authentic, down-to-earth nature of your business.
+
+---
+
+_Built with ❤️ for Duplacye's Barbershop - continuing Luigi's legacy of traditional barbering excellence._
