@@ -9,15 +9,19 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/history", label: "Our Legacy" },
-  ];
+  const navItems = [{ href: "/", label: "Home" }];
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const headerOffset = 100; // Account for sticky header height
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
       setIsMenuOpen(false);
     }
   };
@@ -38,7 +42,9 @@ export default function Navigation() {
               />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Duplacye's</h1>
+              <h1 className="text-2xl font-bold text-gray-900">
+                Duplacye&apos;s
+              </h1>
               <p className="text-sm text-gray-600">Barbershop</p>
             </div>
           </Link>

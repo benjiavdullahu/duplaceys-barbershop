@@ -26,14 +26,14 @@ export default function Home() {
                   className="text-purple-200 text-lg font-medium tracking-[0.2em] uppercase"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  HAMILTON'S LEGACY BARBERSHOP
+                  HAMILTON&apos;S LEGACY BARBERSHOP
                 </span>
               </div>
               <h1
                 className="text-5xl md:text-6xl lg:text-8xl font-light mb-4 lg:mb-6 leading-[0.9]"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                Duplacye's
+                Duplacye&apos;s
                 <span
                   className="block text-4xl md:text-5xl lg:text-6xl text-gray-200 font-light italic"
                   style={{ fontFamily: "'Playfair Display', serif" }}
@@ -51,23 +51,16 @@ export default function Home() {
                 className="text-base lg:text-lg mb-6 lg:mb-8 text-gray-300 leading-relaxed max-w-3xl mx-auto font-light"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                Three decades of professional barbering excellence in the heart
-                of downtown Hamilton. Traditional techniques meet modern style.
+                Eight decades of barbering tradition in the heart of downtown
+                Hamilton. Traditional techniques meet modern style.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-6 lg:mb-8 justify-center">
+              <div className="flex justify-center mb-6 lg:mb-8">
                 <Link
                   href="#services"
                   className="bg-red-600 hover:bg-red-700 text-white px-8 lg:px-10 py-3 lg:py-4 rounded font-medium text-lg transition-all duration-300 text-center shadow-lg hover:shadow-xl transform hover:scale-105 tracking-wide"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   View Services
-                </Link>
-                <Link
-                  href="/history"
-                  className="border-2 border-slate-400 hover:bg-slate-400 hover:text-black text-slate-300 px-8 lg:px-10 py-3 lg:py-4 rounded font-medium text-lg transition-all duration-300 text-center backdrop-blur-sm tracking-wide"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  Our Legacy
                 </Link>
               </div>
               <div
@@ -89,7 +82,7 @@ export default function Home() {
                   <span className="text-gray-200">5 (Yelp)</span>
                 </div>
                 <div className="text-gray-200 font-medium">
-                  30+ Years Experience
+                  80+ Years Legacy
                 </div>
               </div>
 
@@ -147,10 +140,10 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 text-center">
               <div className="group bg-black/30 backdrop-blur rounded-xl p-6 border border-purple-600/20 hover:border-purple-600/50 transition-all duration-300">
                 <div className="text-3xl lg:text-4xl font-bold text-gray-200  mb-2 group-hover:scale-110 transition-transform duration-300">
-                  30+
+                  80+
                 </div>
                 <div className="text-gray-300 text-sm lg:text-base">
-                  Years of Service
+                  Years Legacy
                 </div>
               </div>
               <div className="group bg-black/30 backdrop-blur rounded-xl p-6 border border-purple-600/20 hover:border-purple-600/50 transition-all duration-300">
@@ -308,100 +301,43 @@ export default function Home() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-16 lg:py-24 bg-gray-100">
+      <section id="team" className="py-12 lg:py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 lg:mb-20">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8 lg:mb-12">
               <span
                 className="text-red-600 text-lg font-medium tracking-[0.2em] uppercase mb-4 block"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                MEET THE MASTERS
+                MEET THE MASTER
               </span>
               <h2
-                className="text-4xl lg:text-6xl font-light text-gray-900 mb-6"
+                className="text-3xl lg:text-5xl font-light text-gray-900 mb-6"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                Our Barbers
+                Our Barber
               </h2>
             </div>
 
-            {/* Team Photo */}
-            <div className="mb-12 lg:mb-16">
-              <div className="bg-gray-300 rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto">
-                <div className="aspect-[16/9] flex items-center justify-center">
-                  <div className="text-center text-gray-600">
-                    <svg
-                      className="w-16 h-16 mx-auto mb-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
-                    <p className="text-lg font-medium">
-                      Photo of Both Brothers
-                    </p>
-                    <p className="text-sm">
-                      Placeholder for horizontal team photo
-                    </p>
-                  </div>
+            <div className="bg-gradient-to-br from-gray-50 to-slate-50 rounded-2xl p-6 lg:p-8 border border-slate-200 max-w-md mx-auto">
+              <div className="text-center">
+                <div className="mb-4">
+                  <span className="bg-slate-800 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    Master Barber & Owner
+                  </span>
                 </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-gray-50 to-slate-50 rounded-3xl p-8 lg:p-12 border border-slate-200">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-                <div className="text-center lg:text-left">
-                  <div className="mb-6">
-                    <span className="bg-slate-800 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Master Barber
-                    </span>
-                  </div>
-                  <h3
-                    className="text-2xl lg:text-3xl font-light text-gray-900 mb-3"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                  >
-                    Besim Avdullahu
-                  </h3>
-                  <p
-                    className="text-gray-900 font-medium mb-4 text-lg"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
-                    Owner • 25+ Years Experience
-                  </p>
-                </div>
-
-                <div className="text-center lg:text-left">
-                  <div className="mb-6">
-                    <span className="bg-slate-800 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Skilled Barber
-                    </span>
-                  </div>
-                  <h3
-                    className="text-2xl lg:text-3xl font-light text-gray-900 mb-3"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                  >
-                    Bekim Avdullahu
-                  </h3>
-                  <p
-                    className="text-gray-900 font-medium mb-4 text-lg"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
-                    5+ Years Experience
-                  </p>
-                </div>
+                <h3
+                  className="text-2xl lg:text-3xl font-light text-gray-900 mb-3"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
+                  Besim Avdullahu
+                </h3>
+                <p
+                  className="text-gray-700 font-medium text-lg"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  30+ Years Experience
+                </p>
               </div>
             </div>
           </div>
@@ -502,13 +438,13 @@ export default function Home() {
                 className="text-2xl lg:text-3xl font-light text-gray-200 mb-4"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                Duplacye's Barbershop
+                Duplacye&apos;s Barbershop
               </h3>
               <p
                 className="text-sm text-gray-200 font-medium"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                Family owned since the 1990s
+                Family owned since 2008
               </p>
             </div>
             <div>
@@ -554,8 +490,8 @@ export default function Home() {
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             <p>
-              &copy; {new Date().getFullYear()} Duplacye's Barbershop. A
-              Hamilton tradition since the 1990s.
+              &copy; {new Date().getFullYear()} Duplacye&apos;s Barbershop. A
+              Hamilton tradition for over 80 years.
             </p>
           </div>
         </div>
