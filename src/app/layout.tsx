@@ -20,9 +20,7 @@ export const metadata: Metadata = {
   keywords:
     "barbershop, Hamilton, haircuts, shave, traditional barber, downtown Hamilton, family barbershop, Kosovo barber",
   icons: {
-    icon: "/images/general/Logo.png",
-    shortcut: "/images/general/Logo.png",
-    apple: "/images/general/Logo.png",
+    icon: "/favicon.ico",
   },
 };
 
