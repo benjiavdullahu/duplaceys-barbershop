@@ -1,6 +1,6 @@
 # Duplacye's Barbershop Website
 
-A modern website for Duplacye's Barbershop in downtown Hamilton.
+A website for Duplacye's Barbershop in downtown Hamilton.
 
 ## Getting Started
 
@@ -8,8 +8,6 @@ A modern website for Duplacye's Barbershop in downtown Hamilton.
 npm install
 npm run dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) to view the website.
 
 ## Built With
 
