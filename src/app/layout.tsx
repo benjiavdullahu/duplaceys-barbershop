@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     "Experience over 30 years of traditional barbering excellence at Duplacye's Barbershop. Located at 150 King St East, Hamilton. Quality haircuts, shaves, and family-friendly service since the 1990s.",
   keywords:
     "barbershop, Hamilton, haircuts, shave, traditional barber, downtown Hamilton, family barbershop, Kosovo barber",
+  icons: {
+    icon: "/images/general/Logo.png",
+    shortcut: "/images/general/Logo.png",
+    apple: "/images/general/Logo.png",
+  },
 };
 
 export default function RootLayout({
